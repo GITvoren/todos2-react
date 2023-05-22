@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+.todo{
+  max-width: 350px;
+  margin: 3rem auto;
+  height: 500px;
+  background-image: linear-gradient(to right, rgb(8, 125, 148), rgb(5, 95, 114));
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo{
   display: flex;
   flex-direction: column;
+}
+
+.todo{
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px rgba(202, 202, 202, 0.74);
+}
+
+.todo>h2{
+  align-self: center;
+  color: whitesmoke;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Audiowide', cursive;
+}
+
+.todo>form{
+  align-self: center;
+  display: flex;
+  gap: 3px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 1.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+input{
+  height: 25px;
+  width: 225px;
+  padding-left: 5px;
+  color: whitesmoke;
+  border-radius: 4px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input{
+  background: transparent;
+  border: 2px solid gainsboro;
+}
+
+input:focus{
+  background-color: rgba(14, 147, 173, 0.849);
+  outline: none;
+}
+
+
+.task{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #f0f0f0;
+}
+
+hr{
+  border: 1px solid rgba(156, 156, 156, 0.473);
+}
+
+.task{
+  padding: 8px;
+  border-bottom: 1px solid rgba(156, 156, 156, 0.473);
+}
+
+.task p{
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+.icon{
+  height: 35px;
+  cursor: pointer;
+}
+
+.icon2{
+  height: 30px;
+  cursor: pointer;
+}
+
+.icon-row{
+  display: flex;
+  gap: 3px;
+  padding-left: 1rem;
 }
