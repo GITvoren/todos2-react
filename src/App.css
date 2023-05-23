@@ -87,3 +87,18 @@ hr{
   gap: 3px;
   padding-left: 1rem;
 }
+
+.btn{
+  background: none;
+  border: 0;
+}
+
+
+
+.empty{
+  color: #dadada;
+  font-size: 24px;
+  text-align: center;
+  transform: translateY(100%);
+  font-weight: bold;
+}
