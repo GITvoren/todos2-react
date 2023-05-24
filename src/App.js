@@ -63,7 +63,7 @@ function App(){
             <div className="task-list">
               {todos.length === 0 && <div className="empty">Yay! No Task!</div>}
               {todos.map(todo => {
-                return <Task key = {todo.id} todoprops = {todo} deleteTask={deleteTask} toggleComplete={toggleComplete} />
+                return <Task key = {todo.id} todoprops = {todo} deleteTask={deleteTask} toggleComplete={toggleComplete} todos={todos} setTodos={setTodos} />
               })}
                 
             </div>
