@@ -56,7 +56,7 @@ function App(){
         <div className="todo">
             <h2>To Do's App</h2>
             <form onSubmit={handleSubmit}>
-              <input type="text" value={newTask} onChange={e => setNewTask(e.target.value)} />
+              <input type="text" value={newTask} onChange={e => setNewTask(e.target.value)} placeholder="Enter new task" className="add-input" />
               <button className="btn"><img src={add} className="icon" /></button>
             </form>
             <hr />

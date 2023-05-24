@@ -109,3 +109,8 @@ hr{
   text-decoration-color: rgba(255, 166, 0, 0.767);
   text-decoration-thickness: 2px;
 }
+
+.add-input::placeholder{
+  color: rgba(245, 245, 245, 0.384);
+  font-family: 'Nunito', sans-serif;
+}
