@@ -6,20 +6,16 @@ import {useState, useEffect} from 'react'
 function App(){
 
     const [newTask, setNewTask] = useState("")
-    const [todos, setTodos] = useState([])
+    const [todos, setTodos] = useState(() => {
+      const localValue = localStorage.getItem('task')
+      if(localValue == null) return []
+
+      return JSON.parse(localValue)
+    })
 
     console.table(todos)
 
-   useEffect(() => {
-    const localValue = localStorage.getItem('task')
-
-    if(localValue == ""){
-      setTodos([])
-    }
-    return setTodos(JSON.parse(localValue))
-
-   }, [])
-
+  
     useEffect(() => {
       localStorage.setItem('task', JSON.stringify(todos))
     }, [todos])
@@ -67,11 +63,13 @@ function App(){
             </form>
             <hr />
             <div className="task-list">
-              {todos.length === 0 && <div className="empty">Yay! No Task!</div>}
-              {todos.map(todo => {
+             {todos.length === 0 &&<div className="empty">Yay! No Task!</div>}
+
+            {
+            todos.map(todo => {
                 return <Task key = {todo.id} todoprops = {todo} deleteTask={deleteTask} toggleComplete={toggleComplete} todos={todos} setTodos={setTodos} />
-              })}
-                
+              })
+            }  
             </div>
         </div>
     </div>
