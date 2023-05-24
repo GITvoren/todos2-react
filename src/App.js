@@ -21,10 +21,12 @@ function App(){
     function handleSubmit(e){
       e.preventDefault();
 
-      setTodos(currentTodos => {
-        return [...currentTodos, {id: crypto.randomUUID(), name: newTask, completed:false}]
-      })
-
+      if(newTask.trim().length !== 0){
+           setTodos(currentTodos => {
+          return [...currentTodos, {id: crypto.randomUUID(), name: newTask, completed:false}]
+        })
+      }
+      
       setNewTask("")
 
     }
