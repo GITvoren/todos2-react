@@ -10,7 +10,7 @@ export default function Task({todoprops, deleteTask, toggleComplete}){
           <div className="task">
               <p className= {completed ? "task-done" : ""}>{name}</p>
                <div className="icon-row">
-                    <img src={check} className="icon2" alt="check" onClick={() => toggleComplete(id, completed)} />
+                    <img src={check} className="icon2" alt="check" onClick={() => toggleComplete(id)} />
                     <img src={edit} className="icon2" alt="edit" />
                     <img src={trash} className="icon2" alt="delete" onClick={() => deleteTask(id)} />
                </div>

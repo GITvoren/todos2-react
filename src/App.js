@@ -38,7 +38,7 @@ function App(){
         })
     }
 
-    function toggleComplete(id, completed){
+    function toggleComplete(id){
       setTodos(currentTodos => {
         return currentTodos.map(currentTodo => {
           if(currentTodo.id === id){
