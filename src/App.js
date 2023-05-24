@@ -38,6 +38,19 @@ function App(){
         })
     }
 
+    function toggleComplete(id, completed){
+      setTodos(currentTodos => {
+        return currentTodos.map(currentTodo => {
+          if(currentTodo.id === id){
+            return {...currentTodo, completed: !currentTodo.completed}
+          }
+
+          return currentTodo
+
+        })
+      })
+    }
+
   return (
     <div className="App">
         <div className="todo">
@@ -50,7 +63,7 @@ function App(){
             <div className="task-list">
               {todos.length === 0 && <div className="empty">Yay! No Task!</div>}
               {todos.map(todo => {
-                return <Task key = {todo.id} todoprops = {todo} deleteTask={deleteTask} />
+                return <Task key = {todo.id} todoprops = {todo} deleteTask={deleteTask} toggleComplete={toggleComplete} />
               })}
                 
             </div>

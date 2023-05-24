@@ -102,3 +102,10 @@ hr{
   transform: translateY(100%);
   font-weight: bold;
 }
+
+.task-done{
+  color: #f0f0f07a;
+  text-decoration: line-through;
+  text-decoration-color: rgba(255, 166, 0, 0.767);
+  text-decoration-thickness: 2px;
+}
