@@ -11,7 +11,13 @@ function App(){
     console.table(todos)
 
    useEffect(() => {
-    setTodos(JSON.parse(localStorage.getItem('task')))
+    const localValue = localStorage.getItem('task')
+
+    if(localValue == ""){
+      setTodos([])
+    }
+    return setTodos(JSON.parse(localValue))
+
    }, [])
 
     useEffect(() => {
