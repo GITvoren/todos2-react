@@ -1,3 +1,3 @@
 # Pure React Todo's App
 
-## best app to practice React fundamentals 👍
+## best app to make to practice your React fundamentals 👍
